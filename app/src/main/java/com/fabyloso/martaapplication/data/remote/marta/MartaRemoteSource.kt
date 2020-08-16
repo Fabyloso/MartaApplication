@@ -5,5 +5,5 @@ import javax.inject.Inject
 
 class MartaRemoteSource @Inject constructor(private val martaService: MartaService) :
     BaseRemoteSource() {
-    suspend fun getTrains() = getResult { martaService.getTrains() }
+    suspend fun getTrains()  = getResult { martaService.getTrains() }
 }

@@ -11,7 +11,7 @@ class MartaRemoteController : BaseRemoteController() {
         get() = Interceptor { chain ->
             val urlBuilder = chain.request().url().newBuilder()
 
-            urlBuilder.addQueryParameter("api_Key", BuildConfig.MARTA_KEY)
+//            urlBuilder.addQueryParameter("apikey", BuildConfig.MARTA_KEY)
 
             val newRequest = chain.request()
                 .newBuilder()
