@@ -9,10 +9,9 @@ class MartaRemoteController : BaseRemoteController() {
         get() = "http://developer.itsmarta.com/"
     override val authInterceptor: Interceptor
         get() = Interceptor { chain ->
-            val urlBuilder = chain.request().url().newBuilder()
-
-//            urlBuilder.addQueryParameter("apikey", BuildConfig.MARTA_KEY)
-
+            val urlBuilder = chain.request().url().newBuilder().apply {
+                addQueryParameter("apikey", BuildConfig.MARTA_KEY)
+            }
             val newRequest = chain.request()
                 .newBuilder()
                 .url(urlBuilder.build())
