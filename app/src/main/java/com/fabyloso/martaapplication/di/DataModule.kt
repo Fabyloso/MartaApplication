@@ -1,4 +1,4 @@
-package com.fabyloso.martaapplication
+package com.fabyloso.martaapplication.di
 
 import com.fabyloso.martaapplication.data.remote.marta.MartaRemoteController
 import com.fabyloso.martaapplication.data.remote.marta.MartaRemoteSource
